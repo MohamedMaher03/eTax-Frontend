@@ -7,10 +7,13 @@ import CompleteRegistrationForm from './Components/RegistrationForm/CompleteRegi
 function App() {
   return (
     <>
+<<<<<<< HEAD
       <Routes>
         <Route path="/register" element={<RegistrationForm />} />
         <Route path="/complete-register" element={<CompleteRegistrationForm />} />
       </Routes>
+=======
+>>>>>>> 581c167f8d591756c8dae54546a1bd7a2b03b6a4
     </>
   );
 }
