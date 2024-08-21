@@ -27,7 +27,7 @@ function LoginForm()
 
             if(response.ok){
                 localStorage.setItem('token', data.token);
-                window.location.href = '/screens/home.html';
+                window.location.href = '/home';
             } else{
                 setErrMsg("Login failed please check your email and password match with the ones on the system.");
                 setHasError(true);
