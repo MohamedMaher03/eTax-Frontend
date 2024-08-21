@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat:wght@400;500;600&display=swap");
+@import url("/style/color.css");
+
+* {
+  font-family: "Amiri", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url(/assets/svg/fullBG.svg);
+}
+
+/* USER VIEW */
+
+body#user{
+  height: auto;
+  background-image: url(/assets/svg/headerBG.svg);
+}
+
+/* End USER VIEW */
+
+.cardTheme {
+  background-color: var(--white);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.scrollit {
+  height: 86vh;
+  overflow-y: scroll;
+  padding: 15px;
+}
+a,
+.btn-link,
+.btn-link:hover {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--blueGreen);
+}
+
+/* =================================================================== */
+
+/* ScrollBar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px grey;  */
+  border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--placeholder);
+  border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue);
+}
+
+/* ===================================================================== */
+
+/* INPUTS THEME */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+input[type="email"],
+input[type="number"] {
+  text-align: start;
+  direction: rtl;
+}
+
+.form-label {
+  font-size: 18px;
+  color: var(--black);
+}
+
+.form-control,
+.form-select {
+  font-size: 18px;
+  color: var(--black);
+  padding: 10px;
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  box-shadow: none;
+  border-color: #dee2e6;
+}
+
+.form-control::placeholder,
+.form-select::placeholder {
+  color: var(--placeholder);
+  font-size: 0.8em;
+}
+
+select.form-select.avilable{
+  background-color: var(--avialable);
+  border: none;
+  color: var(--green);
+
+}
+select.form-select.notAvilable{
+  background-color: var(--notAvilable);
+  border: none;
+  color: var(--red);
+
+}
+
+/* END INPUTS THEME */
+
+/* ===================================================================== */
+
+/* BUTTON THEME */
+
+.btn-outline-primary,
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:visited {
+  background-color: var(--white) !important;
+  border: solid 1px var(--blue) !important;
+  padding: 10px;
+  min-width: 100px;
+  font-size: 1em;
+  pointer-events: visible;
+  color: var(--blue) !important ;
+}
+.btn-outline-primary-error,
+.btn-outline-primary-error:hover,
+.btn-outline-primary-error:active,
+.btn-outline-primary-error:visited {
+  background-color: var(--white) !important;
+  border: solid 1px var(--red) !important;
+  padding: 10px;
+  min-width: 100px;
+  font-size: 1em;
+  pointer-events: visible;
+  color: var(--red) !important ;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: var(--blue) !important;
+  padding: 10px;
+  min-width: 100px;
+  font-size: 18px;
+  border: 0px;
+  pointer-events: visible;
+}
+.btn-primary.red,
+.btn-primary.red:hover,
+.btn-primary.red:active,
+.btn-primary.red:visited {
+  background-color: var(--red) !important;
+  padding: 10px;
+  min-width: 100px;
+  font-size: 14px;
+  border: 0px;
+  pointer-events: visible;
+}
+.btn-primary.notActive,
+.btn-primary.notActive:hover,
+.btn-primary.notActive:active,
+.btn-primary.notActive:visited {
+  background-color: var(--greyDisabled) !important;
+  padding: 10px;
+  min-width: 100px;
+  font-size: 14px;
+  border: 0px;
+  color: var(--greyTextDisabled);
+  pointer-events: visible;
+}
+
+/* END BUTTON THEME */
+
+/* ============================================================================================ */
+
+/* AUTH PAGES */
+
+.authPageTitle {
+  color: var(--red);
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.link-info,
+.link-info:hover {
+  color: var(--blue) !important;
+  font-size: 1em;
+}
+.fa-arrow-left {
+  color: var(--blue) !important;
+  margin: 6px;
+}
+
+/* ============================================================================================ */
+
+/* Modal Style */
+
+.modal-title {
+  color: var(--blue);
+  font-size: 1.3em !important;
+  font-weight: bold;
+}
+
+button.btn-close {
+  --bs-btn-close-bg: url(/assets/svg/close.svg);
+  font-size: 25px;
+  --bs-btn-close-opacity: 1;
+  --bs-btn-close-hover-opacity: 1;
+}
+.modal-body {
+  font-size: 1.3em;
+}
+
+/* ============================================================================================= */
+
+/* navbar  */
+
+#navbar .nav-link {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0 15px;
+  color: var(--blue);
+}
+#navbar .nav-link:hover {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0 15px;
+  color: var(--red);
+}
+
+/* end navbar  */
+
+/* ============================================================================= */
+/* header section */
+
+section#header {
+  padding: 80px 0; /* Adjust padding as needed */
+}
+.title {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--red);
+}
+.description {
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  line-height: 2;
+}
+.image {
+  max-width: 100%;
+  height: auto;
+}
+/* ============================================================================= */
+/* counter */
+
+.countrText {
+  padding: 0 25px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.counterTitle {
+  color: var(--blue);
+}
+.counterCount {
+  color: var(--red);
+}
+
+/* ============================================================================= */
+#users,#addUsers,#buyQuote{
+  margin: 5% auto;
+}
+#users .sectionTitleCard, #buyQuote .sectionTitleCard , #addUsers .sectionTitleCard {
+  width: fit-content;
+  outline-width: 5px;
+  /* outline-offset: 5px; */
+  outline-style: dashed;
+  outline-color: var(--blue);
+  margin: auto;
+}
+
+.titleSection {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  color: var(--red);
+}
+/* ============================================================================= */
+
+
+/* ============================================================================= */
+/* TABLE */
+
+thead {
+  --bs-table-bg: var(--lightBlue);
+}
+
+tbody > tr:hover {
+  --bs-table-bg: var(--hovertable);
+  cursor: pointer;
+}
+tbody > tr.active {
+  --bs-table-bg: var(--hovertable);
+}
+
+th {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--blue) !important;
+}
+tr {
+  height: 64px;
+}
+#dashboard tr {
+  height: 55px;
+}
+
+td {
+  font-size: 1.2em;
+  color: var(--black) !important;
+}
+
+th,
+td {
+  vertical-align: middle;
+}
+
+table tbody tr td.approve {
+  color: var(--green) !important;
+}
+table tbody tr td.review {
+  color: var(--orange) !important;
+}
+table tbody tr td.reject {
+  color: var(--red) !important;
+}
+
+ul.pagination li.page-item a.page-link {
+  --bs-pagination-padding-x: 1rem;
+  --bs-pagination-padding-y: 0.5rem;
+}
+
+.pagination {
+  --bs-pagination-color: var(--blue) !important;
+  --bs-pagination-active-bg: var(--blue) !important;
+  --bs-pagination-active-border-color: var(--blueGreen) !important;
+}
+
+.addCredit {
+  width: 50px;
+}
+
+/* END TABLE */
+
+/* ================================================================================================== */
+/* buyerQuote */
+
+#buyQuote .countNum{
+  font-size: 1.5em;
+  margin:0.6em auto;
+  font-weight: bold;
+  color: var(--blue);
+}
+#buyQuote .text{
+  font-size: 1.3em;
+  color: var(--grey);
+}
+#buyQuote .price{
+  font-size: 1.6em;
+  margin:0.6em auto;
+  font-weight: bold;
+  color: var(--red);
+}
+
+.carousel-control-next, .carousel-control-prev {
+  width: auto;
+  margin: auto -50px;
+}
+
+#buyQuote .carousel-control-prev-icon{
+  background-image:url(/assets/svg/rightArrow.svg) !important;
+}
+#buyQuote .carousel-control-next-icon{
+  background-image:url(/assets/svg/leftArrow.svg) !important;
+}
+
+
+
+/* ================================================================================================== */
+/* footer */
+
+#footer{
+  background-image: url(/assets/svg/footerBG.svg);
+}
+
+#footer .desc{
+  font-size: 1.4em;
+  font-weight: bold;
+  margin: auto 50px;
+  line-height: 2em;
+  color: var(--white);
+}
+
+#footer .nav-link {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0 50px;
+  color: var(--white);
+}
+#footer .nav-link:hover {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0 50px;
+  color: var(--white);
+}
+
