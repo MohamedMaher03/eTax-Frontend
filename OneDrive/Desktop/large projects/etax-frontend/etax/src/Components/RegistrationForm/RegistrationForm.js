@@ -10,6 +10,7 @@ const RegistrationForm = () => {
     const [phone, setPhone] = useState('');
     const [accept, setAccept] = useState(false);
     const [isEmailValid, setIsEmailValid] = useState(true);
+    const [successRegistration, setSuccessRegistration] = useState(null);
     const validateEmail = (email) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
@@ -38,21 +39,24 @@ const RegistrationForm = () => {
             isValid = false;
         }
 
-        // submit form data to server
         try {
             if (isValid) {
-                //send data to server
                 let res = await axios.post("http://127.0.0.1:8000/api/auth/register", {
                     name: username,
                     email: email,
                     organization_name: orgname,
                     phone: phone
                 });
+                console.log(res);
                 if (res.status === 200) {
-                    // window.location.pathname = "/";
+                    setSuccessRegistration(true);
+                }
+                else {
+                    setSuccessRegistration(false);
                 }
             }
         } catch (err) {
+            setSuccessRegistration(false);
             console.log(err);
         }
     }
@@ -115,9 +119,19 @@ const RegistrationForm = () => {
                                         تأكيد الإنضمام
                                     </button>
                                 </div>
+                                {successRegistration === true && (
+                                    <p className='alert alert-success'>
+                                        تم التسجيل بنجاح! يرجى التحقق من بريدك الإلكتروني لتأكيد التسجيل.
+                                    </p>
+                                )}
+                                {successRegistration === false && (
+                                    <p className='alert alert-danger'>
+                                        هناك خطأ ما. يرجى المحاولة مرة أخرى.
+                                    </p>
+                                )}
                                 <div className="my-4">
                                     <p>لدى حساب على المنظومة ؟</p>
-                                    <a href="/index.html" className="link-info">تسجيل الدخول</a>
+                                    <a href="/login" className="link-info">تسجيل الدخول</a>
                                 </div>
                                 <button
                                     type="button"
@@ -176,6 +190,7 @@ const RegistrationForm = () => {
                                 style={{ objectFit: "cover", objectPosition: "left" }}
                             />
                         </div>
+
                     </div>
                 </div >
             </section >
